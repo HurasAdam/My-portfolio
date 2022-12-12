@@ -99,6 +99,7 @@ transform: translateX(200%);
 
 @media only screen and (min-width:1000px){
 
+
 .burger{
   display: none;
 }
@@ -107,24 +108,25 @@ transform: translateX(200%);
     background: inherit;
     color: black;
     list-style: none;
-    flex-direction: row;
-
+   
+align-items: center;
     height: inherit;
     width: max-content;
     gap:5rem;
     font-size: 1.2rem;
     font-weight: normal;
-    justify-content:
-   
-  }
-  .menu li{
+  position: unset;
+   flex-direction: row;
+   transform: translateX(0);
     
   }
+
 
 
   .menu-link{
     position: relative;
     cursor: pointer;
+  
   }
   .menu-link::after{
     content: '';
@@ -152,6 +154,6 @@ transform: translateX(200%);
   }
 
   .menu-link:last-child:after{
-    display: no;
+   display: none;
 }
 }
