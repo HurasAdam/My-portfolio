@@ -69,7 +69,7 @@ header {
   height: 0.4rem;
   background-color: black;
   border-radius: 8.5rem;
-  transition: all 0.3s;
+  transition: all ease-in-out 0.3s;
 }
 
 .burger span:nth-child(2){
@@ -92,4 +92,66 @@ header {
 
 .burger.active >span:nth-child(3){
 transform: translateX(200%);
+}
+
+
+/* Deskop menu */
+
+@media only screen and (min-width:1000px){
+
+.burger{
+  display: none;
+}
+  .menu{
+    
+    background: inherit;
+    color: black;
+    list-style: none;
+    flex-direction: row;
+
+    height: inherit;
+    width: max-content;
+    gap:5rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+    justify-content:
+   
+  }
+  .menu li{
+    
+  }
+
+
+  .menu-link{
+    position: relative;
+    cursor: pointer;
+  }
+  .menu-link::after{
+    content: '';
+    width: 0;
+    height: 0.2rem;
+    background-color: black;
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    border-radius: 2rem;
+    transition: all ease-in-out 0.3s;
+    transform:translateX(0)
+    
+    
+  }
+  .menu-link:hover::after{
+    width: 100%;
+  }
+
+  .menu-link:last-child{
+    background:purple;
+    padding: .6rem 1.5rem;
+    border-radius: 1rem;
+    color: white;
+  }
+
+  .menu-link:last-child:after{
+    display: no;
+}
 }
