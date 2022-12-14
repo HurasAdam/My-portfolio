@@ -19,6 +19,54 @@ body {
   height: 100px;
 }
 
+
+/* SECTION-TITLE */
+
+.section-title{
+  font-size: 32px;
+ text-align: center;
+ margin: 2.2rem auto;
+
+width: max-content;
+}
+
+.section-title-main{
+background-color: purple;
+color: white;
+border-top-left-radius: 1rem;
+width: max-content;
+padding: 0.4rem;
+display: inline;
+}
+
+.section-title-sub{
+color: blueviolet;
+position: relative;
+}
+
+
+.section-title-sub::after{
+  content: '';
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: .6rem;
+  position: absolute;
+  bottom:-1rem;
+animation: 1s ease-in-out infinite alternate-reverse squareShadow;
+}
+
+@keyframes squareShadow{
+
+  from{
+box-shadow: 0px 0px 10px rgb(250, 250, 250)
+}
+
+to{
+ box-shadow: 30px 25px 15px red;
+}
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -99,9 +147,7 @@ header {
 transform: translateX(200%);
 }
 
-/* .home .home-img{
-  width: 100%;
-} */
+
 
 /* Deskop menu */
 
@@ -119,6 +165,7 @@ transform: translateX(200%);
 .menu{    
     background: inherit;
     color: black;
+    margin:0 1rem 0 0 ;
     list-style: none;
 align-items: center;
     height: inherit;
@@ -271,7 +318,7 @@ align-items: center;
   }
 
   .home .home-img{
-   width: 48%;
+   width: 45%;
   
   }
   }
@@ -283,9 +330,13 @@ gap:9rem;
 
 }
 
-.home .home-content{
-margin-left:5rem;
+.home .home-content h1{
+
 font-size: 3.4rem;
+}
+
+.home .home-content span{
+  font-size: 1.4rem;
 }
 
 
@@ -298,15 +349,27 @@ font-size: 3.4rem;
   @media only screen and (min-width:1650px){
 
 .home{
-  gap:12rem;
+  gap:13rem;
   margin: 5rem auto;
+  
 }
 
 .home .home-img{
-  width: 42%;
+  width: 45%;
 }
 
 .home .home-content{
-  font-size: 3.8rem;
+  
+margin:0px 0px 80px 0px;
+}
+
+.home .home-content h1{
+  font-size: 3.4rem;
+  
+  
+}
+.home .home-content span{
+  font-size: 1.5rem;
+  
 }
   }
