@@ -17,15 +17,19 @@ body {
 .logo img {
   width: 100px;
   height: 100px;
+  pointer-events: none;
 }
 
+.home img{
+  pointer-events: none;
+}
 
 /* SECTION-TITLE */
 
 .section-title{
   font-size: 32px;
  text-align: center;
- margin: 2.2rem auto;
+ margin: 5.2rem auto;
 
 width: max-content;
 }
