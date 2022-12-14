@@ -99,21 +99,27 @@ header {
 transform: translateX(200%);
 }
 
+/* .home .home-img{
+  width: 100%;
+} */
 
 /* Deskop menu */
 
 @media only screen and (min-width:1000px){
 
 
+  .home .home-img{
+    width: 40%;
+  }
+
 .burger{
   display: none;
 }
-  .menu{
-    
+  
+.menu{    
     background: inherit;
     color: black;
     list-style: none;
-   
 align-items: center;
     height: inherit;
     width: max-content;
@@ -123,10 +129,7 @@ align-items: center;
   position: unset;
    flex-direction: row;
    transform: translateX(0);
-    
   }
-
-
 
   .menu-link{
     position: relative;
@@ -144,9 +147,8 @@ align-items: center;
     border-radius: 2rem;
     transition: all ease-in-out 0.3s;
     transform:translateX(0)
-    
-    
   }
+
   .menu-link:hover::after{
     width: 100%;
   }
@@ -178,7 +180,6 @@ align-items: center;
   font-size: 1.4rem;
 }
 
-
 .home-img{
   width: 40%;
   margin: 0 auto;
@@ -191,7 +192,6 @@ margin: 1rem auto;
 width: max-content;
 padding: .3rem 1rem;
 border-radius: .5rem;
-
 }
 
 .scroll-down-button{
@@ -203,8 +203,6 @@ border-radius: .5rem;
   background:none
   border: 1px solid black;
   border-radius:1rem;
-  
-
 }
 
 .scroll-down-circle{
@@ -226,3 +224,89 @@ border-radius: .5rem;
     transform: translateY(-100%);
   }
 }
+
+
+/* 1200px */
+@media only screen and (min-width:1200px){
+
+.home .home-img{
+  width: 50%;
+  order: 2;
+  margin: 0;
+}
+
+.home{
+  display: flex;
+justify-content: center;
+align-items: center;
+  gap:6rem;
+  width: 90%;
+  margin: 8rem auto;  
+}
+
+.home .home-content{
+ font-size: 2.8rem;
+ margin-left: 2.2rem;
+}
+
+.scroll-down-button{
+  display: none;
+}
+}
+
+/* 1400 px */
+@media only screen and (min-width:1400px){
+  .scroll-down-button{
+    display: none;
+  }
+
+  .home{
+    margin: 9rem auto;
+  gap:0;
+  
+  }
+  .home .home-content{
+    font-size: 3.3rem;
+
+  }
+
+  .home .home-img{
+   width: 48%;
+  
+  }
+  }
+
+  @media only screen and (min-width:1400px){
+
+.home{
+gap:9rem;
+
+}
+
+.home .home-content{
+margin-left:5rem;
+font-size: 3.4rem;
+}
+
+
+.home .home-img{
+  width: 40%;
+}
+  }
+
+
+  @media only screen and (min-width:1650px){
+
+.home{
+  gap:12rem;
+  margin: 5rem auto;
+}
+
+.home .home-img{
+  width: 42%;
+}
+
+.home .home-content{
+  font-size: 3.8rem;
+}
+  }
