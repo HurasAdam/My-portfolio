@@ -64,12 +64,12 @@ animation: 1s ease-in-out infinite alternate-reverse squareShadow;
 /* PROJECTS */
 .projects-content{
 display: grid;
-grid-template-columns: auto;
+
 }
 
 .project-content-card{
   width: 80%;
-  margin: 0 auto;
+  margin: 1.2rem auto;
   border-radius: 2rem;
   
   background-color: rgb(193, 190, 190);
@@ -218,6 +218,11 @@ transform: translateX(200%);
 @media only screen and (min-width:1000px){
 
 
+.projects-content{
+  grid-template-columns: repeat(2,1fr);
+}
+
+
   .home .home-img{
     width: 40%;
   }
@@ -340,6 +345,9 @@ border-radius: .5rem;
 /* 1200px */
 @media only screen and (min-width:1200px){
 
+
+
+
 .home .home-img{
   width: 50%;
   order: 2;
@@ -367,6 +375,11 @@ align-items: center;
 
 /* 1400 px */
 @media only screen and (min-width:1400px){
+  
+  .projects-content{
+    grid-template-columns: repeat(4,1fr);
+  }
+
   .scroll-down-button{
     display: none;
   }
