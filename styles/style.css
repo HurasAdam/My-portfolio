@@ -60,6 +60,66 @@ position: relative;
 animation: 1s ease-in-out infinite alternate-reverse squareShadow;
 }
 
+
+/* PROJECTS */
+.projects-content{
+display: grid;
+grid-template-columns: auto;
+}
+
+.project-content-card{
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  
+  background-color: rgb(193, 190, 190);
+}
+
+.project-content-card img{
+width: 60%;
+margin: 2rem auto;
+display: block;
+}
+
+.project-card-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-name{
+  font-size: 1.8rem;
+  margin-left: 4rem;
+  border-bottom: 2px solid orange;
+}
+
+.project-link img{
+  width: 1.5rem;
+  margin-right: 3rem;
+}
+
+.project-description{
+text-align: justify;
+margin: 0 3.8rem;
+font-size: 1.2rem;
+}
+
+
+.project-technologies{
+  display: flex;
+ flex-direction: column;
+ 
+}
+
+.technologies-used-icons{
+  display: flex;
+  width: 50%;
+}
+
+.technologies-used-icons img{
+  width: 8%;
+}
+
 @keyframes squareShadow{
 
   from{
