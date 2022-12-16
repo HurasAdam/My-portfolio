@@ -259,11 +259,21 @@ header {
   font-size: 1.6rem;
   font-weight: bold;
   transform: translateX(100%);
-  z-index: 2;
+  z-index: 5;
 }
 
 .menu.active {
   transform: translateX(0);
+  
+}
+
+.menu-link{
+  transition: 0.1s ease-in-out;
+}
+
+.menu-link:hover{
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .burger {
@@ -504,6 +514,16 @@ border-radius: .5rem;
   animation: circleMovement 1s infinite alternate-reverse;
 }
 
+.about{
+  margin-top: 11rem;
+}
+
+
+.about img {
+  width: 55%;
+  margin-top: 3.2rem;
+}
+
 @keyframes circleMovement {
   from {
     transform: translateY(0%);
@@ -566,6 +586,12 @@ border-radius: .5rem;
   .scroll-down-button {
     display: none;
   }
+
+  .about img {
+    width: 50%;
+    margin-top: 3.2rem;
+  }
+
 }
 
 /*-------------------- 1400 px ----------*/
@@ -617,6 +643,16 @@ border-radius: .5rem;
   .home .home-img {
     width: 45%;
   }
+
+  
+  .about img {
+    width: 40%;
+    margin-top: 3.2rem;
+  }
+
+  .about{
+    margin-top: 11.5rem;
+  }
 }
 
 @media only screen and (min-width: 1650px) {
@@ -652,11 +688,11 @@ border-radius: .5rem;
   }
 
   .about .section-title {
-    margin: 9.5rem auto 1.6rem auto;
+    margin: 12.5rem auto 1.6rem auto;
   }
 
   .about img {
-    width: 45%;
+    width: 35%;
     margin-top: 3.2rem;
   }
 
