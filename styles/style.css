@@ -23,7 +23,6 @@ body {
   width: 100px;
   height: 100px;
   pointer-events: none;
-  
 }
 
 #home {
@@ -56,12 +55,34 @@ font-size: 1.2rem;
   display: flex;
   justify-content: center;
   border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
 }
 .home-icons img {
   width: max-content;
+  z-index: 3;
 }
 .home img {
   pointer-events: none;
+}
+
+.home-icons:hover {
+}
+
+.home-icons::after {
+  content: "";
+  width: 34px;
+  height: 35px;
+  border-radius: 5.9rem;
+
+  position: absolute;
+  background-color: transparent;
+  z-index: 1;
+  transition: 0.2s ease-in-out;
+}
+.home-icons:hover::after {
+  background-color: black;
 }
 
 /* SECTION-TITLE */
@@ -102,7 +123,6 @@ font-size: 1.2rem;
 /* PROJECTS */
 .projects-content {
   display: grid;
-
 }
 
 .project-content-card {
@@ -119,29 +139,35 @@ font-size: 1.2rem;
   display: block;
 }
 
+.project-content-card a img {
+  width: 1.8rem;
+}
+
 .project-card-info {
   width: 98%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0 auto;
 }
 
 .project-name {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin: 0 0 0 0.4rem;
   border-bottom: 2px solid rgb(119, 0, 255);
-  width: max-content;
-  padding-right: 5rem;
+  width: 100%;
+
+  padding-right: 1.6rem;
 }
 
 .project-link {
   margin-right: 0.8rem;
+  width: 50%;
 }
 
 .project-link img {
-  width: 1.5rem;
+  width: max-content;
   margin-right: 3rem;
   transition: 0.1s ease-in;
   transition-duration: 0.2s;
@@ -308,16 +334,37 @@ header {
   margin: 0 auto;
 }
 
-@media only screen and (width<=300px) {
-  
+.about-section-title-sub {
+  color: blueviolet;
+  position: relative;
+}
 
-  
+.about-section-title-sub::after {
+  content: "?";
+  font-size: 6rem;
+  width: 20px;
+  height: 20px;
+  color: red;
+  border-bottom-right-radius: 0.6rem;
+  position: absolute;
+  top: -3.5rem;
+  right: -2rem;
+  animation: 1.4s ease-in-out infinite alternate-reverse questionMark;
+}
+@keyframes questionMark {
+  form {
+    color: red;
+  }
+  to {
+    color: white;
+  }
+}
+
+@media only screen and (width<=300px) {
   .home-content {
     width: 70%;
     display: flex;
- 
   }
-
 }
 
 /*  1000px Deskop menu */
@@ -343,7 +390,10 @@ header {
 
   .project-content-card img {
     width: 80%;
- 
+  }
+
+  .project-content-card a img {
+    width: 20%;
   }
   .home .home-img {
     width: 40%;
@@ -407,12 +457,10 @@ header {
   margin: 4rem 0 0 0;
 }
 
-.projects-content{
+.projects-content {
   width: 90%;
   margin: 0 auto;
 }
-
-
 
 .home-content h1 {
   font-size: 3.2rem;
@@ -513,7 +561,6 @@ border-radius: .5rem;
 
   .project-content-card img {
     width: 65%;
-  
   }
 
   .scroll-down-button {
@@ -529,21 +576,24 @@ border-radius: .5rem;
   }
 
   .projects-content {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     width: 88%;
     margin: 0 auto;
-    gap:2rem;
+    gap: 2rem;
   }
 
   .project-content-card {
-    width: 100%;
+    width: 90%;
   }
 
-  .project-content-card img{
+  .project-content-card img {
     width: 80%;
   }
 
+  .project-content-card a img {
+    width: 40%;
+  }
   .scroll-down-button {
     display: none;
   }
@@ -566,7 +616,6 @@ border-radius: .5rem;
 
   .home .home-img {
     width: 45%;
-
   }
 }
 
@@ -580,15 +629,10 @@ border-radius: .5rem;
     margin: 5rem auto;
 
     display: flex;
-    
   }
-
 
   .home .home-content {
     margin: 0px auto;
-    
-
-
   }
 
   .home .home-content h1 {
@@ -598,22 +642,14 @@ border-radius: .5rem;
     font-size: 1.4rem;
   }
 
-
-
-   
-
-
-
   .project-content-card {
-   
-width: 85%;
+    width: 85%;
     padding: 2rem 0 0 0;
   }
 
-
-.project-content-card {
-  width: 80%;
-}
+  .project-content-card {
+    width: 80%;
+  }
 
   .about .section-title {
     margin: 9.5rem auto 1.6rem auto;
@@ -622,10 +658,9 @@ width: 85%;
   .about img {
     width: 45%;
     margin-top: 3.2rem;
-   
   }
 
-  .description{
+  .description {
     width: 80%;
   }
 }
