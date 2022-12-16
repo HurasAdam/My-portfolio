@@ -70,54 +70,103 @@ display: grid;
 .project-content-card{
   width: 80%;
   margin: 1.2rem auto;
-  border-radius: 2rem;
   
-  background-color: rgb(193, 190, 190);
+  border-radius: 2rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.062)
 }
 
 .project-content-card img{
-width: 60%;
-margin: 2rem auto;
+width: 80%;
+margin: 1.2rem auto;
 display: block;
 }
 
 .project-card-info{
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+ 
+
 }
 
 .project-name{
-  font-size: 1.8rem;
-  margin-left: 4rem;
-  border-bottom: 2px solid orange;
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  margin-top: 0;
+margin-left: 0.4rem;
+  border-bottom: 2px solid rgb(119, 0, 255);
+width: max-content;
+  padding-right: 5rem;
+}
+
+
+.project-link{
+  margin-right: 0.8rem;
+
+  
 }
 
 .project-link img{
   width: 1.5rem;
   margin-right: 3rem;
+  transition: 0.1s ease-in;
+  transition-duration: 0.2s;
+  margin: auto auto;
+  
+}
+
+.project-link img:hover{
+  transform: rotate(360deg);
 }
 
 .project-description{
 text-align: justify;
-margin: 0 3.8rem;
+margin: 0.8rem 0.4rem;
 font-size: 1.2rem;
 }
 
 
+.technologies-title{
+  display: block;
+  width: max-content;
+  height: max-content;
+  margin: 0 ;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid orange;
+  padding: 0 4rem 0 0.5rem;
+}
+
 .project-technologies{
-  display: flex;
- flex-direction: column;
+
+margin:2rem 0 0 .4rem;
+ height: max-content;
+ 
  
 }
 
 .technologies-used-icons{
+  margin: .8rem 0rem;
   display: flex;
-  width: 50%;
+ align-items: center;
+ justify-content: space-evenly;
+ width: 20%;
+}
+
+.technologies-used-icons img:hover{
+  scale:  1.6;
+  cursor: pointer;
+  
 }
 
 .technologies-used-icons img{
-  width: 8%;
+  transition: 0.2s ;
+ 
+  margin: 0;
+  height: 2rem;
+  width: 2rem;
 }
 
 @keyframes squareShadow{
@@ -216,6 +265,19 @@ transform: translateX(200%);
 /* Deskop menu */
 
 @media only screen and (min-width:1000px){
+
+
+
+  .technologies-used-icons{
+    margin: .8rem 0rem;
+    width: 40%;
+  }
+
+
+  .technologies-title{
+
+    padding: 0 4rem 0 0.5rem;
+  }
 
 
 .projects-content{
@@ -345,7 +407,16 @@ border-radius: .5rem;
 /* 1200px */
 @media only screen and (min-width:1200px){
 
+  .technologies-used-icons{
+    margin: .8rem 0;
+ width: 50%;
+  }
 
+
+  .technologies-title{
+
+    padding: 0 4rem 0 0.5rem;
+  }
 
 
 .home .home-img{
