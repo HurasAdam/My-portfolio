@@ -12,6 +12,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -375,7 +376,12 @@ header {
     width: 70%;
     display: flex;
   }
-}
+
+  .project-technologies p{
+    padding: 0.4rem;
+  }
+  }
+
 
 /*  1000px Deskop menu */
 
@@ -594,6 +600,21 @@ border-radius: .5rem;
 
 }
 
+@media only screen and (min-width: 1350px) {
+
+  .about-content{
+    width: 85%;
+    margin: 0 auto;
+  display: flex;
+}
+
+.description{
+  width: 50%;
+}
+
+}
+
+
 /*-------------------- 1400 px ----------*/
 
 @media only screen and (min-width: 1400px) {
@@ -692,11 +713,20 @@ border-radius: .5rem;
   }
 
   .about img {
-    width: 35%;
+    width: 40%;
     margin-top: 3.2rem;
   }
 
-  .description {
-    width: 80%;
-  }
+
+  .about-content{
+    width: 85%;
+    margin: 0 auto;
+  display: flex;
+}
+
+.description{
+  width: 50%;
+  margin-top: 6rem;
+}
+
 }
