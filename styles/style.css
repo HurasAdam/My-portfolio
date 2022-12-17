@@ -12,7 +12,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -241,7 +240,10 @@ font-size: 1.2rem;
 header {
   display: flex;
   justify-content: space-between;
-
+  position: sticky;
+  top: 0;
+  background: white;
+  
   margin: 0 auto;
 }
 
@@ -259,20 +261,20 @@ header {
   color: white;
   font-size: 1.6rem;
   font-weight: bold;
+  transition: 0.4s ease-in-out;
   transform: translateX(100%);
-  z-index: 5;
+  z-index: 6;
 }
 
 .menu.active {
   transform: translateX(0);
-  
 }
 
-.menu-link{
+.menu-link {
   transition: 0.1s ease-in-out;
 }
 
-.menu-link:hover{
+.menu-link:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
@@ -377,11 +379,10 @@ header {
     display: flex;
   }
 
-  .project-technologies p{
+  .project-technologies p {
     padding: 0.4rem;
   }
-  }
-
+}
 
 /*  1000px Deskop menu */
 
@@ -520,10 +521,9 @@ border-radius: .5rem;
   animation: circleMovement 1s infinite alternate-reverse;
 }
 
-.about{
+.about {
   margin-top: 11rem;
 }
-
 
 .about img {
   width: 55%;
@@ -597,23 +597,19 @@ border-radius: .5rem;
     width: 50%;
     margin-top: 3.2rem;
   }
-
 }
 
 @media only screen and (min-width: 1350px) {
-
-  .about-content{
+  .about-content {
     width: 85%;
     margin: 0 auto;
-  display: flex;
-}
+    display: flex;
+  }
 
-.description{
-  width: 50%;
+  .description {
+    width: 50%;
+  }
 }
-
-}
-
 
 /*-------------------- 1400 px ----------*/
 
@@ -665,13 +661,12 @@ border-radius: .5rem;
     width: 45%;
   }
 
-  
   .about img {
     width: 40%;
     margin-top: 3.2rem;
   }
 
-  .about{
+  .about {
     margin-top: 11.5rem;
   }
 }
@@ -717,16 +712,14 @@ border-radius: .5rem;
     margin-top: 3.2rem;
   }
 
-
-  .about-content{
+  .about-content {
     width: 85%;
     margin: 0 auto;
-  display: flex;
-}
+    display: flex;
+  }
 
-.description{
-  width: 50%;
-  margin-top: 6rem;
-}
-
+  .description {
+    width: 50%;
+    margin-top: 6rem;
+  }
 }
