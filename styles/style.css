@@ -384,6 +384,13 @@ header {
   }
 }
 
+
+
+.technologies-items{
+  width: 70%;
+  margin: 5rem auto;
+  display: flex;
+}
 /*  1000px Deskop menu */
 
 @media only screen and (min-width: 1000px) {
