@@ -73,8 +73,6 @@ font-size: 1.2rem;
   width: 34px;
   height: 35px;
   border-radius: 5.9rem;
-  
-
   position: absolute;
   background-color:black
   z-index: 1;
@@ -415,6 +413,64 @@ header {
   width: 4rem;
 
 }
+
+.section-contact-title{
+  margin:8.5rem 0 ;
+}
+
+.contact-container .section-contact-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.contact-container{
+
+  width: 85%;
+  margin: 0 auto;
+}
+
+.contact img{
+
+  display: none;
+
+
+}
+
+.contact-form{
+  margin: 0 0 0 5rem;
+}
+
+.contact-form button{
+  background: var(--purple-gradient);
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 0 ;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.contact-form input, .contact-form textarea{
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem 0rem;
+  border-radius: 0.5rem;
+  border: 1px solid grey;
+}
+
+.contact-form-field{
+ 
+  margin: 1rem;
+}
+
+.contact-form-field label{
+  display: block;
+  font-size: 0.9rem;
+}
 /*  1000px Deskop menu */
 
 @media only screen and (min-width: 1000px) {
@@ -574,6 +630,13 @@ border-radius: .5rem;
     transform: translateY(-100%);
   }
 }
+@media only screen and (width>= 1100px) {
+
+.contact img{
+  display: flex;
+}
+}
+
 
 /*------------------ 1200px ----------------*/
 @media only screen and (width>= 1200px) {
@@ -718,6 +781,10 @@ border-radius: .5rem;
 
 @media only screen and (min-width: 1650px) {
   
+
+
+
+
 .technologies-items{
   width: 90%;
 }
@@ -756,7 +823,8 @@ border-radius: .5rem;
 
 
   .project-content-card:hover {
-   transform: scale(1.02);
+ 
+  transform: scale(1.01);
   }
   
 
