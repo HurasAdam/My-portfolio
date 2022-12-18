@@ -1,17 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
 
 :root {
-  --purple-gradient: linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0, 0.8)
-  );
+  --purple-gradient: linear-gradient(225deg,rgba(69, 20, 148, 0.536),rgba(41, 16, 116, 0.959));
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -48,7 +45,7 @@ font-size: 1.2rem;
 } */
 
 .home-icons {
-  background-color: rgb(136, 0, 255);
+  background: var(--purple-gradient);
   margin-top: 1.6rem;
   padding: 0.8rem 1.8rem;
   width: max-content;
@@ -62,27 +59,31 @@ font-size: 1.2rem;
 .home-icons img {
   width: max-content;
   z-index: 3;
-}
-.home img {
-  pointer-events: none;
+
 }
 
-.home-icons:hover {
+.home img {
+  pointer-events: none;
+  
 }
+
 
 .home-icons::after {
   content: "";
   width: 34px;
   height: 35px;
   border-radius: 5.9rem;
+  
 
   position: absolute;
-  background-color: transparent;
+  background-color:black
   z-index: 1;
   transition: 0.2s ease-in-out;
 }
 .home-icons:hover::after {
   background-color: black;
+ 
+  
 }
 
 /* SECTION-TITLE */
@@ -96,7 +97,7 @@ font-size: 1.2rem;
 }
 
 .section-title-main {
-  background-color: purple;
+background: var(--purple-gradient);
   color: white;
   border-top-left-radius: 1rem;
   width: max-content;
@@ -387,7 +388,7 @@ header {
 
 
 .technologies-items{
-  width: 70%;
+  width: 75%;
   margin: 5rem auto;
   display: flex;
   gap:1rem;
@@ -399,16 +400,29 @@ header {
 .tchnologies-item{
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.062);
   padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.tchnologies-item:hover{
+  box-shadow: 0px 3px 5px rgba(41, 33, 61, 0.147);;
+  cursor: pointer;
  
-  
 }
 
 .tchnologies-item img{
-  width: 5rem;
+  width: 4rem;
+
 }
 /*  1000px Deskop menu */
 
 @media only screen and (min-width: 1000px) {
+  
+
+
+  
+  
   .section-title {
     margin: 9.5rem auto 4rem auto;
 
@@ -563,6 +577,9 @@ border-radius: .5rem;
 
 /*------------------ 1200px ----------------*/
 @media only screen and (width>= 1200px) {
+  
+ 
+  
   .technologies-used-icons {
     margin: 0.8rem 0;
     width: 50%;
@@ -604,7 +621,7 @@ border-radius: .5rem;
   }
 
   .project-content-card {
-    width: 80%;
+    width: 75%%;
   }
 
   .project-content-card img {
@@ -650,7 +667,13 @@ border-radius: .5rem;
 
   .project-content-card {
     width: 90%;
+    transition: all 0.1s ease-in-out;
   }
+
+  
+  .project-content-card:hover {
+    transform: scale(1.02);
+   }
 
   .project-content-card img {
     width: 80%;
@@ -694,6 +717,15 @@ border-radius: .5rem;
 }
 
 @media only screen and (min-width: 1650px) {
+  
+.technologies-items{
+  width: 90%;
+}
+.technologies-items img{
+  width: 4.5rem;
+}
+
+  
   .section-title {
     margin-top: 8rem;
   }
@@ -717,13 +749,16 @@ border-radius: .5rem;
   }
 
   .project-content-card {
-    width: 85%;
+    width: 80%;
     padding: 2rem 0 0 0;
+    transition: all 0.1s ease-in-out;
   }
 
-  .project-content-card {
-    width: 80%;
+
+  .project-content-card:hover {
+   transform: scale(1.02);
   }
+  
 
   .about .section-title {
     margin: 12.5rem auto 1.6rem auto;
