@@ -242,9 +242,10 @@ header {
   position: sticky;
   top: 0;
   background: white;
-  
   margin: 0 auto;
+
 }
+
 
 .menu {
   display: flex;
@@ -485,6 +486,10 @@ background-color: red;
   
 
 
+  header.active{
+    box-shadow: .1px .1px 5px black;
+    width: 100%;
+  }
   
   
   .section-title {
