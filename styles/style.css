@@ -452,6 +452,12 @@ header {
   border: none;
   color: white;
   cursor: pointer;
+  transition: all 0.1s ease-in-out
+}
+
+.contact-form button:hover{
+background-color: red;
+
 }
 
 .contact-form input, .contact-form textarea{
@@ -466,6 +472,8 @@ header {
  
   margin: 1rem;
 }
+
+
 
 .contact-form-field label{
   display: block;
@@ -634,7 +642,16 @@ border-radius: .5rem;
 
 .contact img{
   display: flex;
+  width: 50%;
 }
+.contact-form{
+  width: 50%;
+}
+
+.contact{
+  display: flex;
+}
+
 }
 
 
