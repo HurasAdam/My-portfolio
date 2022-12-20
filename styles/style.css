@@ -494,7 +494,6 @@ background-color: red;
   
   .section-title {
     margin: 9.5rem auto 4rem auto;
-
     width: max-content;
   }
   .technologies-used-icons {
@@ -598,14 +597,6 @@ background-color: red;
   display: block;
 }
 
-/* .home-icons{
-background-color: rgb(71, 22, 78);
-margin: 1rem auto;
-width: max-content;
-padding: .3rem 1rem;
-border-radius: .5rem;
-} */
-
 .scroll-down-button {
   width: 1.5rem;
   height: 5rem;
@@ -664,7 +655,6 @@ border-radius: .5rem;
 @media only screen and (width>= 1200px) {
   
  
-  
   .technologies-used-icons {
     margin: 0.8rem 0;
     width: 50%;
@@ -755,7 +745,6 @@ border-radius: .5rem;
     transition: all 0.1s ease-in-out;
   }
 
-  
   .project-content-card:hover {
     transform: scale(1.02);
    }
@@ -804,9 +793,6 @@ border-radius: .5rem;
 @media only screen and (min-width: 1650px) {
   
 
-
-
-
 .technologies-items{
   width: 90%;
 }
@@ -814,7 +800,6 @@ border-radius: .5rem;
   width: 4.5rem;
 }
 
-  
   .section-title {
     margin-top: 8rem;
   }
@@ -843,13 +828,10 @@ border-radius: .5rem;
     transition: all 0.1s ease-in-out;
   }
 
-
-  .project-content-card:hover {
- 
+  .project-content-card:hover { 
   transform: scale(1.01);
   }
   
-
   .about .section-title {
     margin: 12.5rem auto 1.6rem auto;
   }
