@@ -28,7 +28,11 @@ menuLinks.forEach((el) => {
       document.querySelector(`.${key}`).getBoundingClientRect().top +
       window.pageYOffset -
       112;
-
+if(key==='home'){
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+else{
     window.scrollTo({ top: section, behavior: "smooth" });
+}
   });
 });
