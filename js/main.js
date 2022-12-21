@@ -36,3 +36,22 @@ else{
 }
   });
 });
+
+const aboutImg= document.querySelector('.about-hero')
+
+
+document.addEventListener('scroll',function(e){
+  const scrollPosition= scrollY;
+  console.log(scrollPosition)
+
+
+  if(scrollPosition>1300){
+ 
+    aboutImg.classList.add('active');
+  }
+  else{
+    aboutImg.classList.remove('active')
+  }
+})
+
+

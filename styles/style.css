@@ -341,10 +341,27 @@ header {
   margin: 4rem auto 1.6rem auto;
 }
 
-.about img {
+.about-hero{
   width: 75%;
   display: block;
   margin: 0 auto;
+  transform:translateX(60%);
+
+  
+  opacity: 0;
+  transition: all 1.6s;
+
+}
+
+
+@keyframes aboutImgAnimation{
+  0%{
+ 
+  }
+  100%{
+    transform:translateX(0%);
+    opacity: 1;
+  }
 }
 
 .about-section-title-sub {
@@ -655,6 +672,13 @@ background-color: red;
 @media only screen and (width>= 1200px) {
   
  
+  .about-hero.active {
+    transform:translateX(0%);
+    opacity: 1;
+ 
+  }
+  
+
   .technologies-used-icons {
     margin: 0.8rem 0;
     width: 50%;
