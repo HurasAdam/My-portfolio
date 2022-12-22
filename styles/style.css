@@ -345,11 +345,17 @@ header {
   width: 75%;
   display: block;
   margin: 0 auto;
-  transform:translateX(60%);
+  transform:translateX(40%);
 
   
   opacity: 0;
-  transition: all 1.6s;
+  transition: all 1.2s;
+
+}
+
+.about-hero.active {
+  transform:translateX(0%);
+  opacity: 1;
 
 }
 
@@ -672,11 +678,7 @@ background-color: red;
 @media only screen and (width>= 1200px) {
   
  
-  .about-hero.active {
-    transform:translateX(0%);
-    opacity: 1;
- 
-  }
+
   
 
   .technologies-used-icons {

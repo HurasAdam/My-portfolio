@@ -37,21 +37,24 @@ else{
   });
 });
 
-const aboutImg= document.querySelector('.about-hero')
 
 
-document.addEventListener('scroll',function(e){
-  const scrollPosition= scrollY;
-  console.log(scrollPosition)
+const about= document.querySelector('.about')
 
-
-  if(scrollPosition>1300){
+const observer = new IntersectionObserver(
+  function(entries, observer) {
+entries.forEach(entry=>{
  
-    aboutImg.classList.add('active');
-  }
-  else{
-    aboutImg.classList.remove('active')
-  }
+
+  if (entry.isIntersecting) {
+    const aboutImage= document.querySelector('.about-hero')
+aboutImage.classList.add('active')
+    }
 })
+
+})
+     
+
+  observer.observe(about)
 
 
