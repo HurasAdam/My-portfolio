@@ -28,33 +28,27 @@ menuLinks.forEach((el) => {
       document.querySelector(`.${key}`).getBoundingClientRect().top +
       window.pageYOffset -
       112;
-if(key==='home'){
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-else{
-    window.scrollTo({ top: section, behavior: "smooth" });
-}
+    if (key === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: section, behavior: "smooth" });
+    }
   });
 });
 
+const about = document.querySelector(".about");
 
+const observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    const aboutImage = document.querySelector(".about-hero");
 
-const about= document.querySelector('.about')
+    if (entry.isIntersecting && aboutImage.className === "about-hero") {
+      aboutImage.classList.add("active");
 
-const observer = new IntersectionObserver(
-  function(entries, observer) {
-entries.forEach(entry=>{
- 
-
-  if (entry.isIntersecting) {
-    const aboutImage= document.querySelector('.about-hero')
-aboutImage.classList.add('active')
+      const desc = document.querySelector(".description");
+      desc.classList.add("active");
     }
-})
+  });
+});
 
-})
-     
-
-  observer.observe(about)
-
-
+observer.observe(about);

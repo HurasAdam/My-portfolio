@@ -335,6 +335,14 @@ header {
   line-height: 1.6rem;
   width: 85%;
   margin: 3rem auto;
+  transform: translateX(-40%);
+  opacity: 0;
+ transition: all 1.6s;
+}
+
+.description.active{
+transform: translateX(0%);
+opacity: 1;
 }
 
 .about .section-title {
@@ -345,30 +353,43 @@ header {
   width: 75%;
   display: block;
   margin: 0 auto;
-  transform:translateX(40%);
-
   
-  opacity: 0;
-  transition: all 1.2s;
+opacity: 0;
+  
+transform: translateX(50%);
+  transition: all 1s cubic-bezier(0.61, 1, 0.88, 1);
 
 }
 
 .about-hero.active {
-  transform:translateX(0%);
   opacity: 1;
-
+transform: translateX(0%);
 }
 
 
-@keyframes aboutImgAnimation{
-  0%{
- 
-  }
+
+
+@keyframes undefined-easeOutBounce {
+	0% {
+		transform: translateX(100%);
+	}
+
+
+
+	75% {
+		transform: translateX(2.46%);
+	}
+
+	90% {
+		transform: translateX(1.5%);
+	}
+
   100%{
-    transform:translateX(0%);
-    opacity: 1;
+    transform: translateX(0%);
   }
 }
+
+
 
 .about-section-title-sub {
   color: blueviolet;
