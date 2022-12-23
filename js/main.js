@@ -2,6 +2,21 @@ const header = document.querySelector("header");
 const burgerButton = document.querySelector(".burger");
 const mobileMenu = document.querySelector(".menu");
 const menuLinks = document.querySelectorAll(".menu-link");
+const about = document.querySelector(".about");
+const desc = document.querySelector(".description");
+const home = document.querySelector(".home");
+const project = document.querySelector(".projects");
+const headeroptions = {
+  root: null,
+  rootMarin: "0px",
+  threshold: 0.67,
+};
+
+const options = {
+  root: null,
+  rootMarin: "0px",
+  threshold: 0.5,
+};
 
 function stickMenu() {
   const scrollPosition = window.scrollY;
@@ -36,19 +51,50 @@ menuLinks.forEach((el) => {
   });
 });
 
-const about = document.querySelector(".about");
-
 const observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {
     const aboutImage = document.querySelector(".about-hero");
 
-    if (entry.isIntersecting && aboutImage.className === "about-hero") {
+    if (entry.isIntersecting) {
       aboutImage.classList.add("active");
-
-      const desc = document.querySelector(".description");
-      desc.classList.add("active");
+      setTimeout(() => {
+        desc.classList.add("active");
+      }, 200);
+      observer.unobserve(about);
     }
   });
-});
+}, options);
 
 observer.observe(about);
+observer.observe(desc);
+
+const headerObserver = new IntersectionObserver(function (
+  entries,
+  headerObserver
+) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry);
+
+      home.classList.add("active");
+    } else if (!entry.isIntersecting) {
+      home.classList.remove("active");
+    }
+  });
+},
+headeroptions);
+headerObserver.observe(project);
+
+const mutationHeaderObserver = new MutationObserver(function (entries) {
+  console.log(entries);
+});
+
+mutationHeaderObserver.observe(home, { childList: true });
+
+const projectsContent = document.querySelectorAll(".projects-content");
+
+const converted = [...projectsContent];
+
+const check = converted.filter((el) => {
+  el.classList.contains("project-content-card");
+});
