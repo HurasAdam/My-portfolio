@@ -53,11 +53,11 @@ menuLinks.forEach((el) => {
 });
 
 const observer = new IntersectionObserver(function (entries, observer) {
-  entries.forEach((entry) => {
-    const aboutImage = document.querySelector(".about-hero");
+  Array.from(entries).forEach((entry) => {
+    // const aboutImage = document.querySelector(".about-hero");
 
     if (entry.isIntersecting) {
-      aboutImage.classList.add("active");
+      const box =entry.childNodes[3].childNodes[3].classList.add('active')
       setTimeout(() => {
         desc.classList.add("active");
       }, 200);
@@ -89,3 +89,7 @@ const mutationHeaderObserver = new MutationObserver(function (entries) {
 });
 
 mutationHeaderObserver.observe(home, { childList: true });
+
+
+const box =about.childNodes[3].childNodes[3];
+const result = box.children[1];
