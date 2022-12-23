@@ -6,6 +6,7 @@ const about = document.querySelector(".about");
 const desc = document.querySelector(".description");
 const home = document.querySelector(".home");
 const project = document.querySelector(".projects");
+const projectContent = document.querySelector(".projects-content");
 const headeroptions = {
   root: null,
   rootMarin: "0px",
@@ -74,8 +75,6 @@ const headerObserver = new IntersectionObserver(function (
 ) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(entry);
-
       home.classList.add("active");
     } else if (!entry.isIntersecting) {
       home.classList.remove("active");
@@ -90,11 +89,3 @@ const mutationHeaderObserver = new MutationObserver(function (entries) {
 });
 
 mutationHeaderObserver.observe(home, { childList: true });
-
-const projectsContent = document.querySelectorAll(".projects-content");
-
-const converted = [...projectsContent];
-
-const check = converted.filter((el) => {
-  el.classList.contains("project-content-card");
-});
