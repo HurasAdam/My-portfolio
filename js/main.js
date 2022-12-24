@@ -7,10 +7,11 @@ const desc = document.querySelector(".description");
 const home = document.querySelector(".home");
 const project = document.querySelector(".projects");
 const projectContent = document.querySelector(".projects-content");
+
 const headeroptions = {
   root: null,
   rootMarin: "0px",
-  threshold: 0.67,
+  threshold: 0.9,
 };
 
 const options = {
@@ -57,7 +58,8 @@ const observer = new IntersectionObserver(function (entries, observer) {
     // const aboutImage = document.querySelector(".about-hero");
 
     if (entry.isIntersecting) {
-      const box =entry.childNodes[3].childNodes[3].classList.add('active')
+      const aboutImg= document.querySelector('.about-hero')
+      aboutImg.classList.add('active')
       setTimeout(() => {
         desc.classList.add("active");
       }, 200);
@@ -69,20 +71,21 @@ const observer = new IntersectionObserver(function (entries, observer) {
 observer.observe(about);
 observer.observe(desc);
 
-const headerObserver = new IntersectionObserver(function (
-  entries,
-  headerObserver
-) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      home.classList.add("active");
-    } else if (!entry.isIntersecting) {
-      home.classList.remove("active");
+const headerObserver = new IntersectionObserver(function (entries,headerObserver){
+entries.forEach(entry=>{
+  if(entry.isIntersecting)
+    home.classList.add('active')
+
+    else{
+      home.classList.remove('active')
     }
-  });
-},
-headeroptions);
-headerObserver.observe(project);
+  })
+})
+
+headerObserver.observe(project)
+
+
+
 
 const mutationHeaderObserver = new MutationObserver(function (entries) {
   console.log(entries);
@@ -91,5 +94,4 @@ const mutationHeaderObserver = new MutationObserver(function (entries) {
 mutationHeaderObserver.observe(home, { childList: true });
 
 
-const box =about.childNodes[3].childNodes[3];
-const result = box.children[1];
+
