@@ -96,17 +96,16 @@ let opt = {
   characterDataOldValue: false
 };
 
-const mutationHeaderObserver = new MutationObserver(function (entries) {
 
-  entries.parentElements.forEach((mutation=>{
-    if(mutation.type==='attributes' && mutation.attributeName==='active')
-    console.log('xd');
-  }))
- 
- 
-});
-
-mutationHeaderObserver.observe(home, opt);
+const technologiesItem= document.querySelectorAll('.tchnologies-item')
+const test = document.getElementById('test')
 
 
 
+for(i=0;i<technologiesItem.length;i++){
+  technologiesItem[i].classList.add('active')
+// technologiesItem[i].style.opacity='1';
+technologiesItem[i].style.transitionDelay = `${i*(0.7)}s`
+technologiesItem[i].style.transitionDuration = `${4}s`
+}
+  
