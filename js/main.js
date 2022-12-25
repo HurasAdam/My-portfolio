@@ -55,8 +55,7 @@ menuLinks.forEach((el) => {
 
 const observer = new IntersectionObserver(function (entries, observer) {
   Array.from(entries).forEach((entry) => {
-    // const aboutImage = document.querySelector(".about-hero");
-
+ 
     if (entry.isIntersecting) {
       const aboutImg= document.querySelector('.about-hero')
       aboutImg.classList.add('active')
@@ -68,8 +67,8 @@ const observer = new IntersectionObserver(function (entries, observer) {
   });
 }, options);
 
-observer.observe(about);
-observer.observe(desc);
+
+
 
 const headerObserver = new IntersectionObserver(function (entries,headerObserver){
 entries.forEach(entry=>{
@@ -83,15 +82,31 @@ entries.forEach(entry=>{
 })
 
 headerObserver.observe(project)
+observer.observe(about);
 
 
 
+let opt = {
+  childList: true,
+  attributes: true,
+  characterData: false,
+  subtree: false,
+  attributeFilter: ['attr1', 'attr2'],
+  attributeOldValue: false,
+  characterDataOldValue: false
+};
 
 const mutationHeaderObserver = new MutationObserver(function (entries) {
-  console.log(entries);
+
+  entries.parentElements.forEach((mutation=>{
+    if(mutation.type==='attributes' && mutation.attributeName==='active')
+    console.log('xd');
+  }))
+ 
+ 
 });
 
-mutationHeaderObserver.observe(home, { childList: true });
+mutationHeaderObserver.observe(home, opt);
 
 
 

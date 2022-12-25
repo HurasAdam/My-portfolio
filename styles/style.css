@@ -370,6 +370,7 @@ transform: translateX(50%);
 .about-hero.active {
   opacity: 1;
 transform: translateX(0%);
+
 }
 
 
