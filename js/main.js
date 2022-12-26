@@ -133,7 +133,7 @@ const chuj= new IntersectionObserver(function (entries, observer) {
       for(i=0;i<technologiesItem.length;i++){
         technologiesItem[i].classList.add('active')
       // technologiesItem[i].style.opacity='1';
-      technologiesItem[i].style.transitionDelay = `${i*(0.4)}s`
+      technologiesItem[i].style.transitionDelay = `${i*(0.2)}s`
       technologiesItem[i].style.transitionDuration = `${1.6}s`
     }
     }

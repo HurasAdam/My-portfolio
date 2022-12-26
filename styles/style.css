@@ -27,8 +27,8 @@ body {
   border-bottom-right-radius: 2px;
 }
 
-#home {
-  margin-top: 6rem;
+.home {
+  margin-top: 5rem;
 }
 
 .home-content {
@@ -51,7 +51,7 @@ font-size: 1.2rem;
 
 .home-icons {
   background: var(--purple-gradient);
-  margin-top: 1.6rem;
+  margin-top: 1rem;
   padding: 0.8rem 1.8rem;
   width: max-content;
   display: flex;
@@ -757,9 +757,10 @@ background-color: red;
   }
 
   .home .home-img {
-    width: 50%;
+    width: 40%;
     order: 2;
     margin: 0;
+    border: 2px solid green;
   }
 
   .home {
@@ -768,7 +769,8 @@ background-color: red;
     align-items: center;
     gap: 6rem;
     width: 90%;
-    margin: 8rem auto;
+    margin: 3.5rem auto 0 auto;
+    border: 2px solid red;
   }
 
   .home-content h1 {
