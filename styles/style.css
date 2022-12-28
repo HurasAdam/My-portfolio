@@ -79,7 +79,7 @@ font-size: 1.2rem;
   height: 35px;
   border-radius: 5.9rem;
   position: absolute;
-  background-color:black
+  background-color:black;
   z-index: 1;
   transition: 0.2s ease-in-out;
 }
@@ -760,7 +760,6 @@ background-color: red;
     width: 40%;
     order: 2;
     margin: 0;
-    border: 2px solid green;
   }
 
   .home {
@@ -770,7 +769,6 @@ background-color: red;
     gap: 6rem;
     width: 90%;
     margin: 3.5rem auto 0 auto;
-    border: 2px solid red;
   }
 
   .home-content h1 {
